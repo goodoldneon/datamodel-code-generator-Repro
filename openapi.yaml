@@ -1,0 +1,32 @@
+openapi: 3.0.0
+
+info:
+  version: 0.0.0
+  title: Example
+
+paths:
+  /foo:
+    get:
+      responses:
+        "200":
+          description: Success
+
+components:
+  schemas:
+    Foo:
+      type: object
+      properties:
+        required:
+          type: integer
+        required_default:
+          type: integer
+          default: 2
+        required_nullable:
+          type: integer
+          nullable: true
+        unrequired:
+          type: integer
+      required:
+        - required
+        - required_default
+        - required_nullable
